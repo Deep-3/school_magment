@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7c1ef6e3-674e-4a63-949e-5bda273c8859",
+		"_postman_id": "f29adfa5-522a-4d46-906c-a1336bcc466f",
 		"name": "School_manage",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "40478578"
@@ -45,8 +45,29 @@
 				{
 					"name": "New Request",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Deep\",\r\n    \"password\":\"Deep@0308\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
 					},
 					"response": []
 				}
@@ -218,7 +239,10 @@
 					"name": "New Request",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": []
 				}
@@ -234,7 +258,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImFkbWluIiwiaWF0IjoxNzM1ODEzMDU4LCJleHAiOjE3MzU4MTY2NTh9.03eHXl_7UOwe_4gZ-ivA1kLgBSkHdbmMPva6dZeAMLQ",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImFkbWluIiwiaWF0IjoxNzM2MTY3MzA2LCJleHAiOjE3MzY3NzIxMDZ9.K3QbU8a22XfblzLftnIqo5He9kbUVaJ6AGv8wUBYjsM",
 								"type": "text"
 							}
 						],
@@ -533,8 +557,38 @@
 				{
 					"name": "New Request",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImFkbWluIiwiaWF0IjoxNzM2MTY3MzA2LCJleHAiOjE3MzY3NzIxMDZ9.K3QbU8a22XfblzLftnIqo5He9kbUVaJ6AGv8wUBYjsM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teacherid\":1,\r\n    \"subjectid\":[1,2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/addteacher//class/teacher/subject",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"addteacher",
+								"",
+								"class",
+								"teacher",
+								"subject"
+							]
+						}
 					},
 					"response": []
 				}
@@ -721,7 +775,31 @@
 					"name": "New Request",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImFkbWluIiwiaWF0IjoxNzM2MTY3MzA2LCJleHAiOjE3MzY3NzIxMDZ9.K3QbU8a22XfblzLftnIqo5He9kbUVaJ6AGv8wUBYjsM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/grade/classperformance?classid=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"grade",
+								"classperformance"
+							],
+							"query": [
+								{
+									"key": "classid",
+									"value": "1"
+								}
+							]
+						}
 					},
 					"response": []
 				}
