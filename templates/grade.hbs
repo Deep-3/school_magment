@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Grade Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .header {
+      background-color:rgb(0, 4, 0);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .content {
+      padding: 20px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .data-table th,
+    .data-table td {
+      border: 1px solid #ddd;
+      text-align: left;
+      padding: 8px;
+    }
+    .data-table th {
+      background-color: #f2f2f2;
+    }
+    .highlight {
+      font-weight: bold;
+      color:rgb(1, 5, 1);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Grade Report</h2>
+    </div>
+    <div class="content">
+      <p>Dear Parent,</p>
+      <p>Below are the Grade details for your child:</p>
+      
+      <table class="data-table">
+        <tr>
+          <th>Student ID</th>
+          <td>{{studentid}}</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>{{name}}</td>
+        </tr>
+       
+        <tr>
+            <th>SubjectName</th>
+            <td>{{subjectname}}</td>
+          </tr>
+          <tr>
+            <th>Grade</th>
+            <td>{{grade}}</td>
+          </tr>
+         
+      </table>
+
+      <p>Congratulations to you for your child's achievements!</p>
+      
+      <p>Thank you for your attention.</p>
+    </div>
+    <div class="footer">
+      <p>© Thank you</p>
+    </div>
+  </div>
+</body>
+</html>

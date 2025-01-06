@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .class-details {
+            margin-bottom: 20px;
+        }
+        .student {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .student:last-child {
+            border-bottom: none;
+        }
+        .student h4 {
+            margin: 0;
+        }
+        .grades {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .no-grade {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Class Performance Report</h2>
+        
+        <div class="class-details">
+            <p><strong>Class ID:</strong> {{classid}}</p>
+            <p><strong>Class Name:</strong> {{name}}</p>
+            <p><strong>Total Students:</strong> {{Students.length}}</p>
+        </div>
+        
+        <h3>Student Performance</h3>
+        {{#each Students}}
+        <div class="student">
+            <h4>Student Name: {{this.studentName}}</h4>
+            {{#if this.grades.length}}
+                <div class="grades">
+                    <p><strong>Grades:</strong></p>
+                    <ul>
+                        {{#each this.grades}}
+                            <li>{{this.subject}}: {{this.grade}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            {{else}}
+                <p class="no-grade">No grades available</p>
+            {{/if}}
+        </div>
+        {{/each}}
+    </div>
+</body>
+</html>
